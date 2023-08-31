@@ -178,8 +178,8 @@ jobs:
       - name: Download CLI Release
         uses: robinraju/release-downloader@v1.8
         with:
-          repo: MaaAssistantArknights/maa-cli
-          lastest: true
+          repository: MaaAssistantArknights/maa-cli
+          latest: true
           fileName: maa_cli-v*-${{ matrix.arch }}-unknown-linux-gnu.tar.gz
           extract: true
           out-file-path: install
