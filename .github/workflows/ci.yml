@@ -184,8 +184,8 @@ jobs:
 
       - name: Extract CLI
         run: |
-          tar xzvf maa_cli-v*-${{ matrix.arch }}-unknown-linux-gnu.tar.gz
-          cp -v maa_cli-v*-${{ matrix.arch }}-unknown-linux-gnu/maa install/
+          maa=$(tar xzvf maa_cli-v*-${{ matrix.arch }}-unknown-linux-gnu.tar.gz)
+          cp -v $maa install/maa
 
       - name: tar files
         run: |
