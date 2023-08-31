@@ -183,7 +183,7 @@ jobs:
           fileName: maa_cli-v*-${{ matrix.arch }}-unknown-linux-gnu.tar.gz
 
       - name: Extract CLI
-        run:
+        run: |
           tar xzvf maa_cli-v*-${{ matrix.arch }}-unknown-linux-gnu.tar.gz
           cp -v maa_cli-v*-${{ matrix.arch }}-unknown-linux-gnu/maa install/
 
