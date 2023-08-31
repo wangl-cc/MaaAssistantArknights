@@ -181,8 +181,11 @@ jobs:
           repository: MaaAssistantArknights/maa-cli
           latest: true
           fileName: maa_cli-v*-${{ matrix.arch }}-unknown-linux-gnu.tar.gz
-          extract: true
-          out-file-path: install
+
+      - name: Extract CLI
+        run:
+          tar xzvf maa_cli-v*-${{ matrix.arch }}-unknown-linux-gnu.tar.gz
+          cp -v maa_cli-v*-${{ matrix.arch }}-unknown-linux-gnu/maa install/
 
       - name: tar files
         run: |
